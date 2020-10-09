@@ -1,0 +1,19 @@
+<% @recent_posts.each do |post| %>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title">
+                <h2><%= post.title %></h2>
+            </div>
+
+            <h6 class="card-subtitle mb-2 text-muted">
+                <a href="#">
+                    <%= post.author.username %>
+                </a>
+            </h6>
+
+            <div class="card-text">
+                <%= post.body %>
+            </div>
+        </div>
+    </div>
+<% end %>
