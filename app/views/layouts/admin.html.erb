@@ -1,0 +1,12 @@
+<% content_for :with_menu do %>
+    <div class="d-flex">
+        <div class="w-25">
+            <%= render partial: "admin_dashboard/menu" %>
+        </div>
+        <div class="ml-5 w-75">
+            <%= yield %>
+        </div>
+    </div>
+<% end %>
+
+<%= render template: "layouts/application" %>

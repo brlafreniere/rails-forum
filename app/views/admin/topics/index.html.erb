@@ -1,0 +1,15 @@
+<table class="table table-bordered">
+    <thead class="thead-light">
+        <th>Name</th>
+        <th>Actions</th>
+    </thead>
+    <% @topics.each do |topic| %>
+        <tr>
+            <td><%= topic.name %></td>
+            <td>
+                <%= link_to "Edit", edit_admin_topic_path(topic), class: "btn btn-sm btn-primary" %>
+                <%= link_to "Delete", admin_topic_path(topic), class: "btn btn-sm btn-danger", method: :delete %>
+            </td>
+        </tr>
+    <% end %>
+</table>

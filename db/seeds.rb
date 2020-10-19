@@ -9,8 +9,13 @@
 user = User.create! email: "brlafreniere@gmail.com",
     password: "blaine",
     password_confirmation: "blaine",
-    username: "brlafreniere"
+    username: "brlafreniere",
+    role: :admin
 
-Post.create! title: "This is a seed post",
-    body: "This is the text of the seed post.",
-    author: user
+10.times do |n|
+    Post.create! title: "This is seed post ##{n}",
+        body: "This is the text of the seed post.",
+        author: user
+end
+
+Topic.create! name: "Outdoors & Recreation"

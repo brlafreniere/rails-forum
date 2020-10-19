@@ -16,7 +16,9 @@
     </head>
 
     <body>
-        <%= render partial: "layouts/nav" %>
+        <% if !@skip_nav %>
+            <%= render partial: "layouts/nav" %>
+        <% end %>
 
         <main class='container mt-5'>
             <% flash.each do |type, message| %>
@@ -33,7 +35,11 @@
                 </div>
             <% end %>
 
-            <%= yield %>
+            <% if content_for?(:with_menu) %>
+                <%= yield(:with_menu) %>
+            <% else %>
+                <%= yield %>
+            <% end %>
         </div>
     </body>
 </html>
