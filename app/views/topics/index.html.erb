@@ -2,7 +2,7 @@
     <% @topics.each do |topic| %>
         <tr>
             <td>
-                <h2><%= link_to topic.name, topic_path(topic) %></h2>
+                <%= link_to topic.name, topic_path(topic) %>
             </td>
         </tr>
     <% end %>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :topics
+  resources :users
 
   namespace :admin do
     resources :topics

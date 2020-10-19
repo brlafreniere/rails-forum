@@ -1,0 +1,8 @@
+<h4><%= @user.username %></h4>
+
+<h5 class="mt-5">Post History</h5>
+<ul class="list-group">
+    <% @user.posts.each do |post| %>
+        <li class="list-group-item"><%= post.title %></li>
+    <% end %>
+</ul>

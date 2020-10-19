@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
     validates_presence_of :username, allow_blank: false
 
+    has_many :posts, foreign_key: :author_id
+
     enum role: {
         admin: 0,
         moderator: 1,

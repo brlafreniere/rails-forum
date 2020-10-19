@@ -12,10 +12,20 @@ user = User.create! email: "brlafreniere@gmail.com",
     username: "brlafreniere",
     role: :admin
 
-10.times do |n|
+outdoor_topic = Topic.create! name: "Outdoors & Recreation"
+
+3.times do |n|
     Post.create! title: "This is seed post ##{n}",
         body: "This is the text of the seed post.",
-        author: user
+        author: user,
+        topic: outdoor_topic
 end
 
-Topic.create! name: "Outdoors & Recreation"
+grilling_topic = Topic.create! name: "Grilling"
+
+3.times do |n|
+    Post.create! title: "This is seed post ##{n}",
+        body: "This is the text of the seed post.",
+        author: user,
+        topic: grilling_topic
+end
