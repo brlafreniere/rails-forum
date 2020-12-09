@@ -17,6 +17,7 @@ class Ability
 
         if user.user?
             can :read, Topic
+            can :read, User
         end
 
         if user.admin?

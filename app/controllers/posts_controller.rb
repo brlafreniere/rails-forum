@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+    authorize_resource
+
     def show
         @post = Post.find(params[:id])
     end
