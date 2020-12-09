@@ -2,6 +2,8 @@
 <h1 class="text-center"><%= @topic.name %></h1>
 <ul class="list-group">
     <% @topic.posts.each do |post| %>
-        <li class="list-group-item"><%= link_to post.title, post_path(post) %></li>
+        <div class="mb-3">
+            <%= render partial: "posts/card", locals: {post: post} %>
+        </div>
     <% end %>
 </ul>

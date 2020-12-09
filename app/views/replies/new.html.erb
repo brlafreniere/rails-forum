@@ -1,0 +1,18 @@
+<div class="mb-5">
+    <h4 class="text-center">Replying To</h4>
+    <%= render partial: "posts/card", locals: {post: Post.find(params[:post_id])} %>
+</div>
+
+<div>
+    <h4 class="text-center">Type Your Reply</h4>
+    <%= form_with(model: Reply.new) do |f| %>
+        <div class="form-group">
+            <%= f.label :body %>
+            <%= f.text_area :body, class: "form-control", rows: "10" %>
+        </div>
+
+        <div class="form-group">
+            <%= f.submit class: "btn btn-primary" %>
+        </div>
+    <% end %>
+</div>

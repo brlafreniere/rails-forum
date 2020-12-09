@@ -5,12 +5,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resources :posts
+  resources :replies
   resources :topics
   resources :users
-
-  namespace :admin do
-    resources :topics
-  end
-
-  resource :admin_dashboard, controller: :admin_dashboard
 end

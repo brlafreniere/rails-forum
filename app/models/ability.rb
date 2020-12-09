@@ -18,11 +18,14 @@ class Ability
         if user.user?
             can :read, Topic
             can :read, User
+            can :manage, Reply, user_id: current_user.id
         end
 
         if user.admin?
             can :show, :admin_dashboard
             can :manage, Topic
+            can :manage, Reply
+            can :manage, User
         end
 
         if user.id
