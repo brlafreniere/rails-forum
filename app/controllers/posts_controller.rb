@@ -12,6 +12,7 @@ class PostsController < ApplicationController
     def create
         @post = Post.new(post_params)
         @post.author = current_user
+        @post.topic = Topic.find(params[:post][:topic_id])
         if @post.save
             flash[:success] = "Post saved successfully."
             redirect_to "/"
