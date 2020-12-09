@@ -12,6 +12,12 @@ user = User.create! email: "brlafreniere@gmail.com",
     username: "brlafreniere",
     role: :admin
 
+user = User.create! email: "joe@gmail.com",
+    password: "joe123",
+    password_confirmation: "joe123",
+    username: "joey99",
+    role: :user
+
 outdoor_topic = Topic.create! name: "Outdoors & Recreation"
 
 3.times do |n|
